@@ -3,13 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Beauty Bar</title>
+  <title>Beauty Bar | Beauty Salon Brisbane | Luxury Nails, Hair & Makeup</title>
+  <meta name="description" content="Beauty Bar in Brisbane offers luxury nails, facials, hair styling, makeup, lashes, brows, and more. Book your beauty treatment today!">
+  <meta name="keywords" content="Beauty Salon Brisbane, Luxury Nails Brisbane, Facials Brisbane, Hair Styling Brisbane, Makeup Brisbane, Lashes and Brows Brisbane">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Raleway:wght@400;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary: #d65b88; /* rose pink */
-      --secondary: #f9c5d1; /* blush */
-      --accent: #fff0f6; /* soft background */
+      --primary: #d65b88;
+      --secondary: #f9c5d1;
+      --accent: #fff0f6;
       --dark: #333;
       --light: #fff;
     }
@@ -17,7 +19,7 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
     html {
-      scroll-behavior: smooth; /* 🌸 smooth scroll */
+      scroll-behavior: smooth;
     }
 
     body {
@@ -27,11 +29,12 @@
       line-height: 1.6;
     }
 
+    /* HEADER */
     header {
-      background: linear-gradient(rgba(214,91,136,0.7), rgba(214,91,136,0.7)), 
-                  url('https://images.unsplash.com/photo-1500840216050-6ffa99b6d7f7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80') center/cover;
+      background: linear-gradient(rgba(214,91,136,0.6), rgba(214,91,136,0.6)),
+                  url('https://images.unsplash.com/photo-1500840216050-6ffa99b6d7f7?auto=format&fit=crop&w=1200&q=80') center/cover;
       color: white;
-      padding: 5rem 1rem;
+      padding: 5rem 1rem 3rem;
       text-align: center;
     }
 
@@ -44,8 +47,44 @@
     header p {
       font-size: 1.2rem;
       opacity: 0.9;
+      margin-bottom: 1.5rem;
     }
 
+    header .cta {
+      background: var(--secondary);
+      color: var(--dark);
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 1rem;
+    }
+
+    /* SPECIAL OFFERS */
+    .offers-banner {
+      background: var(--secondary);
+      color: var(--dark);
+      padding: 0.8rem;
+      text-align: center;
+      font-weight: 600;
+      overflow: hidden;
+    }
+
+    .offers-banner span {
+      display: inline-block;
+      animation: slide 10s infinite linear;
+    }
+
+    @keyframes slide {
+      0% { transform: translateY(0); }
+      33% { transform: translateY(-100%); }
+      66% { transform: translateY(-200%); }
+      100% { transform: translateY(0); }
+    }
+
+    /* NAV */
     nav {
       background: var(--light);
       display: flex;
@@ -55,24 +94,36 @@
       border-bottom: 1px solid #eee;
       position: sticky;
       top: 0;
-      z-index: 10;
+      z-index: 100;
+    }
+
+    nav img {
+      height: 40px;
+      margin-right: auto;
+      position: absolute;
+      left: 1rem;
+      top: 0.5rem;
     }
 
     nav a {
       text-decoration: none;
       color: var(--primary);
       font-weight: 600;
-      transition: color 0.3s;
+      font-size: 1.1rem;
+      padding: 0.6rem 1rem;
+      border-radius: 6px;
     }
 
     nav a:hover {
-      color: #a23a64;
+      background: var(--secondary);
     }
 
+    /* SECTIONS */
     section {
       padding: 3rem 1rem;
       max-width: 1100px;
       margin: auto;
+      background: linear-gradient(to bottom, #fff, var(--accent));
     }
 
     section h2 {
@@ -83,7 +134,7 @@
       font-size: 2rem;
     }
 
-    /* Services */
+    /* SERVICES */
     .services-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -91,14 +142,12 @@
     }
 
     .service-card {
-      background: var(--accent);
+      background: var(--light);
       padding: 1.5rem;
       border-radius: 12px;
       text-align: center;
       box-shadow: 0 4px 8px rgba(0,0,0,0.05);
       transition: transform 0.3s;
-      opacity: 0;
-      transform: translateY(40px);
     }
 
     .service-card:hover {
@@ -110,50 +159,54 @@
       color: var(--primary);
     }
 
-    /* Loyalty */
+    /* LOYALTY */
     .loyalty {
       background: var(--secondary);
       padding: 2rem;
       border-radius: 12px;
       text-align: center;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      opacity: 0;
-      transform: translateY(40px);
     }
 
-    .loyalty p {
-      margin: 0.5rem 0;
-      font-size: 1.1rem;
+    .loyalty form {
+      margin-top: 1.5rem;
+      display: grid;
+      gap: 1rem;
+      max-width: 400px;
+      margin-inline: auto;
     }
 
-    .loyalty button {
-      margin-top: 1rem;
-      padding: 0.8rem 1.5rem;
-      background: var(--primary);
-      color: var(--light);
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      font-weight: 600;
-      transition: background 0.3s;
+    /* TESTIMONIALS */
+    .testimonials {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
 
-    .loyalty button:hover {
-      background: #a23a64;
+    .testimonial {
+      background: var(--light);
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      text-align: center;
+      font-style: italic;
     }
 
-    /* Contact */
+    .stars {
+      color: gold;
+      margin-top: 0.5rem;
+    }
+
+    /* CONTACT */
     .contact form {
       display: grid;
       gap: 1rem;
       max-width: 500px;
       margin: auto;
-      opacity: 0;
-      transform: translateY(40px);
     }
 
-    input, textarea {
-      padding: 0.8rem;
+    input, textarea, button {
+      padding: 1rem;
       border-radius: 8px;
       border: 1px solid #ccc;
       font-size: 1rem;
@@ -161,12 +214,9 @@
     }
 
     button {
-      padding: 0.8rem;
-      border-radius: 6px;
       background: var(--primary);
       color: var(--light);
       border: none;
-      font-size: 1rem;
       font-weight: bold;
       cursor: pointer;
     }
@@ -178,14 +228,20 @@
     .contact-info {
       text-align: center;
       margin-top: 2rem;
-      opacity: 0;
-      transform: translateY(40px);
     }
 
     .contact-info a {
       color: var(--primary);
       text-decoration: none;
       font-weight: bold;
+    }
+
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: 0;
+      border-radius: 12px;
+      margin-top: 1.5rem;
     }
 
     footer {
@@ -195,34 +251,6 @@
       color: var(--dark);
       margin-top: 2rem;
     }
-
-    /* Floating Book Now Button */
-    .book-now {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: var(--primary);
-      color: var(--light);
-      padding: 1rem 1.5rem;
-      border-radius: 50px;
-      font-weight: bold;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-      text-decoration: none;
-      transition: transform 0.3s, box-shadow 0.3s;
-      z-index: 999;
-    }
-
-    .book-now:hover {
-      transform: scale(1.05);
-      box-shadow: 0 6px 16px rgba(0,0,0,0.25);
-    }
-
-    /* Animation states */
-    .animate {
-      opacity: 1 !important;
-      transform: translateY(0) !important;
-      transition: opacity 0.8s ease, transform 0.8s ease;
-    }
   </style>
 </head>
 <body>
@@ -230,50 +258,73 @@
   <header>
     <h1>Beauty Bar</h1>
     <p>Your beauty, our passion ✨</p>
+    <a href="#contact" class="cta">Book Now</a>
   </header>
 
+  <!-- SPECIAL OFFERS -->
+  <div class="offers-banner">
+    <span>🌸 20% off facials this month 🌸 • 🎁 Free brow shape with lash extensions 🎁 • 💅 $10 off manicures for new clients 💅</span>
+  </div>
+
+  <!-- NAV -->
   <nav>
+    <img src="https://via.placeholder.com/100x40?text=Beauty+Bar" alt="Beauty Bar Logo">
     <a href="#services">Services</a>
     <a href="#loyalty">Loyalty</a>
+    <a href="#testimonials">Reviews</a>
     <a href="#contact">Contact</a>
   </nav>
 
+  <!-- SERVICES -->
   <section id="services">
     <h2>Our Services</h2>
     <div class="services-grid">
-      <div class="service-card">
-        <h3>💅 Nails</h3>
-        <p>Manicure, pedicure, and nail art from $40</p>
-      </div>
-      <div class="service-card">
-        <h3>💆 Facials</h3>
-        <p>Relaxing facials & skincare treatments from $70</p>
-      </div>
-      <div class="service-card">
-        <h3>💇 Hair</h3>
-        <p>Styling, cuts, and coloring from $60</p>
-      </div>
-      <div class="service-card">
-        <h3>💄 Makeup</h3>
-        <p>Day & event makeup from $90</p>
-      </div>
-      <div class="service-card">
-        <h3>🌸 Lashes & Brows</h3>
-        <p>Lash extensions, lifts, and brow shaping from $50</p>
-      </div>
+      <div class="service-card"><h3>💅 Nails</h3><p>Manicure, pedicure & nail art from $40</p></div>
+      <div class="service-card"><h3>💆 Facials</h3><p>Relaxing facials & skincare from $70</p></div>
+      <div class="service-card"><h3>💇 Hair</h3><p>Styling, cuts & coloring from $60</p></div>
+      <div class="service-card"><h3>💄 Makeup</h3><p>Day & event makeup from $90</p></div>
+      <div class="service-card"><h3>🌸 Lashes & Brows</h3><p>Extensions, lifts & shaping from $50</p></div>
     </div>
   </section>
 
+  <!-- LOYALTY -->
   <section id="loyalty">
     <h2>Loyalty Program</h2>
     <div class="loyalty">
-      <p>💖 Earn 1 point for every $1 spent</p>
+      <p>💖 Earn 1 point per $1 spent</p>
       <p>🎁 Free treatment after 100 points</p>
       <p>🎂 Birthday specials & VIP offers</p>
-      <button>Join Now</button>
+      <form>
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email Address" required>
+        <button type="submit">Join Loyalty Program</button>
+      </form>
     </div>
   </section>
 
+  <!-- TESTIMONIALS -->
+  <section id="testimonials">
+    <h2>What Our Clients Say</h2>
+    <div class="testimonials">
+      <div class="testimonial">
+        <p>“Best facial I’ve ever had! My skin feels amazing.”</p>
+        <div class="stars">★★★★★</div>
+        <strong>- Emma R.</strong>
+      </div>
+      <div class="testimonial">
+        <p>“The nail art was incredible and lasted weeks. Highly recommend!”</p>
+        <div class="stars">★★★★★</div>
+        <strong>- Sarah L.</strong>
+      </div>
+      <div class="testimonial">
+        <p>“So professional and welcoming. Love my new hair color!”</p>
+        <div class="stars">★★★★★</div>
+        <strong>- Mia T.</strong>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
   <section id="contact">
     <h2>Contact Us</h2>
     <form>
@@ -287,29 +338,13 @@
       <p>📞 <a href="tel:+61712345678">(07) 1234 5678</a></p>
       <p>📧 <a href="mailto:info@beautybar.com">info@beautybar.com</a></p>
     </div>
+    <!-- Google Maps -->
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3538.4321936750914!2d153.02513181506006!3d-27.46977098288798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b915a0ef00b5d5f%3A0x502a35af3de9b30!2sBrisbane%20QLD!5e0!3m2!1sen!2sau!4v1615958430855"></iframe>
   </section>
 
   <footer>
     <p>© 2025 Beauty Bar. All rights reserved.</p>
   </footer>
 
-  <!-- Floating Book Now Button -->
-  <a href="tel:+61712345678" class="book-now">📅 Book Now</a>
-
-  <script>
-    // Intersection Observer for fade-in animations
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("animate");
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.2 });
-
-    document.querySelectorAll(".service-card, .loyalty, form, .contact-info").forEach(el => {
-      observer.observe(el);
-    });
-  </script>
 </body>
 </html>
