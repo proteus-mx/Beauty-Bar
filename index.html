@@ -196,6 +196,27 @@
       margin-top: 2rem;
     }
 
+    /* Floating Book Now Button */
+    .book-now {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: var(--primary);
+      color: var(--light);
+      padding: 1rem 1.5rem;
+      border-radius: 50px;
+      font-weight: bold;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      text-decoration: none;
+      transition: transform 0.3s, box-shadow 0.3s;
+      z-index: 999;
+    }
+
+    .book-now:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+    }
+
     /* Animation states */
     .animate {
       opacity: 1 !important;
@@ -271,6 +292,9 @@
   <footer>
     <p>© 2025 Beauty Bar. All rights reserved.</p>
   </footer>
+
+  <!-- Floating Book Now Button -->
+  <a href="tel:+61712345678" class="book-now">📅 Book Now</a>
 
   <script>
     // Intersection Observer for fade-in animations
