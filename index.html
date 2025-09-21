@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beauty Bar</title>
+  <style>
+    /* Reset */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Helvetica Neue', sans-serif;
+      color: #333;
+      background: #fff;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, #f9c5d1, #f6a6c1);
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2rem;
+    }
+
+    nav {
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      padding: 0.8rem;
+      border-bottom: 1px solid #eee;
+      position: sticky;
+      top: 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #d65b88;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 2rem 1rem;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    section h2 {
+      color: #d65b88;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .services ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .services li {
+      background: #fff0f6;
+      margin: 0.5rem 0;
+      padding: 1rem;
+      border-radius: 8px;
+    }
+
+    .loyalty {
+      background: #fff7fa;
+      padding: 1.5rem;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .contact form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    input, textarea, button {
+      padding: 0.8rem;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    button {
+      background: #d65b88;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #f9c5d1;
+      color: #333;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Beauty Bar</h1>
+    <p>Your beauty, our passion ✨</p>
+  </header>
+
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#loyalty">Loyalty</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="services" class="services">
+    <h2>Our Services</h2>
+    <ul>
+      <li>💅 Manicure & Pedicure</li>
+      <li>💆‍♀️ Facials & Skin Treatments</li>
+      <li>💇 Hair Styling & Coloring</li>
+      <li>💄 Makeup Application</li>
+      <li>🌸 Lash Extensions & Brows</li>
+    </ul>
+  </section>
+
+  <section id="loyalty" class="loyalty">
+    <h2>Loyalty Program</h2>
+    <p>Join our Beauty Bar Loyalty Club 💖</p>
+    <p>✨ Earn 1 point for every $1 spent.</p>
+    <p>✨ Get a free treatment after 100 points!</p>
+    <p>✨ Exclusive birthday specials & VIP offers.</p>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <p style="margin-top:1rem;">📍 123 Main Street, Brisbane QLD<br>📞 (07) 1234 5678</p>
+  </section>
+
+  <footer>
+    <p>© 2025 Beauty Bar. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
